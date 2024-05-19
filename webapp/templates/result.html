@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prediction Result</title>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+	<div class="w3-bar w3-teal w3-padding">
+		<a href="/" class="w3-bar-item w3-button w3-padding" style="width:20%">Home</a>
+		<a href="#" class="w3-bar-item w3-button w3-right w3-padding">About</a>
+		<a  href="{{ url_for('data') }}" class="w3-bar-item w3-button w3-right w3-padding" >Dataset</a>
+	</div>
+	<br>
+	<div class="w3-container w3-center">
+		
+		<div class="w3-card-4 w3-padding w3-margin" style="margin:auto;">
+			<h2 class="w3-text-teal">Malaria Cases Prediction</h2>
+			<p>The predicted number of malaria cases based on the input data is:</p>
+			<h3 class="w3-text-green">{{ prediction }}</h3>
+			<p>This prediction is generated using a machine learning model that considers various factors such as rural and urban population, access to basic services, and geographical location.</p>
+			<p>Understanding the factors that influence malaria cases can help in developing effective strategies for prevention and control.</p>
+			<br>
+			<a href="/" class="w3-button w3-teal w3-round">Make Another Prediction</a>
+		</div>
+	</div>
+	<br>
+	<div class="w3-container w3-teal">
+		<div class="w3-row">
+			<div class="w3-half w3-container">
+				<h4>About the App</h4>
+				<p>This app was built with Flask and W3.CSS, leveraging modern web technologies to provide accurate and useful predictions.</p>
+				<p>Developed by Hamoye GenerativeAI Interns<br/>
+			
+				<br>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Data Entry Form</title>
+   
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="w3-bar w3-teal w3-padding">
+        <a href="#" class="w3-bar-item w3-button w3-padding "  style="width:20%">Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-right w3-padding" >About</a>
+        <a  href="{{ url_for('data') }}" class="w3-bar-item w3-button w3-right w3-padding" >Dataset</a>
+    </div>
+    
+    <br>
+<div class="w3-container w3-center">
+<h2 class="w3-text-teal">Malaria Cases Prediction</h2>
+</div>
+<br>
+
+<div class="w3-container w3-card" style="width:80%;margin: auto;">
+   <br>
+   <form action="/predict" method="POST">
+	<div class="w3-row">
+		<div class="w3-half w3-container">
+			
+			<div class="w3-container">
+				<label>Year</label><br>
+				<input type="number" class="w3-round w3-padding" name="year" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>Country Code</label>
+				<input type="text" class="w3-round w3-padding" name="countrycode" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>IOM (/1,000 pop)</label>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="iom" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>Malaria Cases Reported</label>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="malariacasesreported" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>Rural Population (% total pop)</label>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="ruralpop" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>Rural Population Growth (annual %)</label>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="ruralpopgrowth" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>Urban Population (% total pop)</label>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="urbanpop" style="width: 80%;" required/>
+			</div>
+			<br>
+				<div class="w3-container">
+    				<label>Urban Population Growth (annual %)</label>
+    				<input type="number" step="0.1" class="w3-round w3-padding" name="urbanpopgrowth" style="width: 80%;" required/>
+    			</div>
+		</div>
+
+		<div class="w3-half w3-container">
+		
+			<div class="w3-container">
+				<label>Basic Drinking Water Services (% pop)</label>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="basicdrinkingwaterservices" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>Basic Drinking Water Rural (% rural pop)</label>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="basicdrinkingwater_rural" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>Basic Drinking Water Urban (% urban pop)</label>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="basicdrinkingwater_urban" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>Basic Sanitation Services (% pop)</label>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="bascisanitationservices" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>Basic Sanitation Services Rural (% rural pop)</label>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="bascisanitationservices_rural" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>Basic Sanitation Services Urban (% urban pop)</label>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="bascisanitationservices_urban" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>Latitude</label><br>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="latitude" style="width: 80%;" required/>
+			</div>
+			<br>
+			<div class="w3-container">
+				<label>Longitude</label><br>
+				<input type="number" step="0.1" class="w3-round w3-padding" name="longitude" style="width: 80%;" required/>
+			</div>
+			<br>
+		</div>
+	</div>
+
+	<div class="w3-container w3-center">
+		<input type="submit" value="Submit" class="w3-teal w3-padding w3-round w3-border-teal">
+	</div>
+	</form>
+	<br>
+</div>
+<br>
+
+<div class="w3-container w3-teal">
+	<div class="w3-row">
+		<div class="w3-half w3-container">
+			<h4>About the App</h4>
+			<p>Developed by Hamoye GenerativeAI Interns<br/>
+			<br><br>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
